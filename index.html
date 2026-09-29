@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokemon Dashboard</title>
+    <link rel="icon" type="image/png" href="./src/assets/images/pokemon5.jpg">
+    <link rel="stylesheet" href="./src/css/global.css">
+    <link rel="stylesheet" href="./src/css/theme.css">
+    <link rel="stylesheet" href="./src/css/dashboard.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Search bar + autocomplete + history + theme toggle -->
+        <section id='s1' class="S1">
+            <header id="searchHeader">
+                <div id="searchDiv">
+                    <div id="search">
+                        <input class="button" id="pkIpt" type="text" placeholder="Pokemon search...">
+                        <div class="text" id="suggestions"></div>
+                    </div>
+                    <button class="button" id="schBtn">
+                        <img id ='searchicon' src="./src/assets/images/search.png">
+                    </button>
+                </div>
+                <div id="historyDiv">
+                    <div class="History">
+                        <button class="button" id="Hsbtn">history</button>
+                        <div class="text" id="historySearch"></div>
+                    </div>
+                    
+                    <div  id="ThemeDiv">
+                        <label class="themecontainer">
+                            <div class="theme">
+                                <input type="checkbox" id="themetgle">
+                                <span class="slider"></span>
+
+                                <img id="sun" src="./src/assets/images/sunicon2.png">
+                                <img id="moon" src="./src/assets/images/moonicon2.png">
+                            </div>
+                        </label>
+                   </div>
+                </div>
+            </header>
+
+        </section>
+
+        <!-- Main Pokémon card -->
+        <section class="S2"> 
+            <main id="mainCard">
+                <div class="bigContainer">
+                    <div id = 'container1'class="container1">
+                        <div class="info">
+                            <h3 id="num"></h3>
+                            <h1 id="name">Pokecards</h1>
+                            <div class="pkTypes">
+                                <span id="Tp"></span>
+                                <span id="Tp2" ></span>
+                            </div>
+                            
+                        </div>
+                    <div class="backgroundDiv">
+                        <div class="background">
+                            <img id="background-img" src="./src/assets/images/pokemon-background.jpg" alt="Pokeball Artowork">
+                        </div>
+                    </div>
+                        <div class="imageDiv">
+                            <div class="image"> 
+                                <div class="shadow"></div>
+                                <img id="img" src="" alt="pokemon artwork">
+                            </div>
+                        </div>
+                        <div class="loadingDiv">
+                            <div id= 'loading'class="loading">
+                                <img id="loading-img" src="./src/assets/gifts/spinningpokeball.gif" alt="loading gift">
+                            </div>
+                        </div>
+                        <div class="loadingDiv">
+                            <div id= 'loading2'class="loading">
+                                <img id="crying-pikachu" src="./src/assets/gifts/madpikachu1.gif" alt="loading gift">
+                            </div>
+                        </div>
+
+                        <div class="basicInfo">
+                            <div class="statInfo">
+                                <span>Height</span>
+                                <span id="Ht"></span>
+                            </div>
+                            <div class="statInfo">
+                                <span>Weight</span>
+                                <span id="Wt"></span>
+                            </div>
+                            <div class="statInfo">
+                                <span>Ability</span>
+                                <span id="Ab"></span>
+                            </div>
+                        </div>
+
+                        <div class="details">
+
+                            <div class="Bars">
+                                <span class="statName" >Hp</span>
+                                <div class="bar">
+                                    <div id="bar0" class="fill"></div>
+                                </div>
+                                <div class="statValue">
+                                    <span id="Hp">0</span>
+                                </div>
+
+                            </div>
+                            <div class="Bars">
+                                <span class="statName">Attack</span>
+                                <div class="bar">
+                                    <div id="bar1" class="fill"></div>
+                                </div>
+                                <div class="statValue">
+                                    <span id="At">0</span>
+                                </div>
+
+                            </div>
+                            <div class="Bars">
+                                <span class="statName">Defense</span>
+                                <div class="bar">
+                                    <div id="bar2" class="fill"></div>
+                                </div>
+                                <div class="statValue">
+                                    <span id="Ds">0</span>
+                                </div>
+
+                            </div>
+                            <div class="Bars">
+                                <span class="statName">S.at</span>
+                                <div class="bar">
+                                    <div id="bar3" class="fill"></div>
+                                </div>
+                                <div class="statValue">
+                                    <span id="Sat">0</span>
+                                </div>
+
+                            </div>
+                            <div class="Bars">
+                                <span class="statName">S.df</span>
+                                <div class="bar">
+                                    <div id="bar4" class="fill"></div>
+                                </div>
+                                <div class="statValue">
+                                    <span id="Sds">0</span>
+                                </div>
+
+                            </div>
+
+                            <div class="Bars">
+                                <span class="statName">Speed</span>
+                                <div class="bar">
+                                    <div id="bar5" class="fill"></div>
+                                </div>
+                                <div class="statValue">
+                                    <span id="Sp">0</span>
+                                </div>   
+                            </div>   
+
+                        
+                        </div>
+                        
+                    </div>
+
+                    <div id = 'container2' class="container2">
+                        <div  id="container2Name">
+                            <span class="evolutionName" id="EvocontainerName">Evolution Chain</span>
+                        </div>
+
+                        <!-- Evolution chain: 1-stage layout -->
+                        <div class='L1-box' id="layout1">
+                            <div id="L1-boxe" class="chainboxes">
+                                <img id = "L1-img1" class ='chainimage' src="" alt="cool">
+                                <span class='evolutionName' id="L1-Ev0"></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Evolution chain: 2-stage layout -->
+                        <div id="layout2">
+                            <div id="basic-chain"  >
+                                <div id="L2-boxe1" class="chainboxes">
+                                    <img id = "L2-img1" class="chainimage" src="" alt="">
+                                    <span class='evolutionName' id="L2-Ev0"></span>
+                                </div>
+
+                                <div class="evoArrow">
+                                    <span id="L2-arrow" class="arrow">→</span>
+                                </div>
+                                
+                                <div id= 'L2-boxe2'class="chainboxes">
+                                    <img id = "L2-img2" class="chainimage" src="" alt="">
+                                    <span class='evolutionName' id="L2-Ev1"></span>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <!-- Evolution chain: 3-stage layout -->
+                        <div id="layout3">
+                            <div id="chain1">
+                                
+                                <div class="chainboxes">
+                                    <img id = "L3-img1" class="chainimage" src="" alt="">
+                                    <span class='evolutionName' id="L3-Ev0"></span>
+                                </div>
+
+                                <div class="evoArrow">
+                                    <span id="arrow1" class="arrow">→</span>
+                                </div>
+                                
+                                <div class="chainboxes">
+                                    <img id = "L3-img2" class="chainimage" src="" alt="">
+                                    <span class='evolutionName' id="L3-Ev1"></span>
+                                </div>
+                            </div>
+
+                            <div id="chain2">
+                                <div class="chainboxes">
+                                    <img id = "L3-img3" class="chainimage" src="" alt="">
+                                    <span class='evolutionName' id="L3-Ev2"></span>
+                                </div>
+
+                                <div class="evoArrow">
+                                    <span id='arrow2' class="arrow">→</span>
+                                </div>
+
+                                <div class="chainboxes">
+                                    <img id = "L3-img4" class="chainimage" src="" alt="">
+                                    <span class='evolutionName' id="L3-Ev3"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </main>
+        </section>
+        
+        <!-- Random, favorites, cry button -->
+        <section class="S3" >
+            <footer> 
+                <div class="random">
+                    <button class="button" id ="favoritebtn">❤️ Add to Favorite</button>
+                    <button class="button" id ="randombtn">Random Pokemon</button>
+                    <button class='button' id="crybtn" aria-label="play pokemon-cry">🔊</button>
+                </div>
+                <div class="favorite">
+                    <img id="Fvi0" class="Favoritetimg" src='./src/assets/images/pokebal2.jpg' alt="pokemon artwork">
+                    <img id="Fvi1" class="Favoritetimg" src='./src/assets/images/pokebal2.jpg' alt="pokemon artwork">
+                    <img id="Fvi2" class="Favoritetimg" src='./src/assets/images/pokebal2.jpg' alt="pokemon artwork">
+                    <img id="Fvi3" class="Favoritetimg" src='./src/assets/images/pokebal2.jpg' alt="pokemon artwork">
+                    <img id="Fvi4" class="Favoritetimg" src='./src/assets/images/pokebal2.jpg' alt="pokemon artwork">
+                </div>
+            </footer>
+        </section>
+    
+    </div>
+
+
+    <script type ="module"  src="./src/js/main.js" defer></script>
+</body>
+</html>

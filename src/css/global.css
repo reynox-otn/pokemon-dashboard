@@ -1,0 +1,14 @@
+body{
+	position: relative;
+	margin: 5vw;
+	transition: background 1s;
+}
+
+:root {
+	--scroll-light-start: rgb(18, 109, 109);
+	--scroll-light-end: rgba(26, 160, 160, 0.829);
+	--scroll-dark-start: #d8dadc;
+	--scroll-dark-end: #EAF4FF;
+	--scroll-start: var(--scroll-light-start);
+	--scroll-end: var(--scroll-light-end);
+}
