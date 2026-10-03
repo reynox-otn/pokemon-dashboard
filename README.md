@@ -10,6 +10,7 @@ The application allows users to search for Pokémon, explore their stats and evo
 - Features
 - Tech Stack
 - Project Structure
+- GitHub
 - Setup
 - Usage
 - Learning
@@ -92,6 +93,10 @@ Pokemon/
 - `src/js/theme.js` — theme toggle behavior
 - `src/assets/images/` — dashboard images and icons
 - `src/assets/gifts/` — loading and Pokémon GIFs
+
+## GitHub
+
+Repository: [reynox-otn/pokemon-dashboard](https://github.com/reynox-otn/pokemon-dashboard)
 
 ## Setup
 
